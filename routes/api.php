@@ -21,4 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::group(['prefix' => 'category'], function () {
     Route::get('/', [CategoryController::class, 'index']);
+    Route::post('/', [CategoryController::class, 'import']);
 });

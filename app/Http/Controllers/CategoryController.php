@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Imports\CategoryImport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class CategoryController extends Controller
 {
@@ -45,5 +47,14 @@ class CategoryController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function import()
+    {
+        Excel::import(new CategoryImport, 'categories.xlsx');
+        return 'deu bom';
     }
 }
