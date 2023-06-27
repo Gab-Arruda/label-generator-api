@@ -66,13 +66,19 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 ## Populate database
-- The database is populated with some xlsx which are stored in storafe/app.
+- The database is populated with some xlsx which are stored in storafe/app. To populate the database use the command: php artisan app:import-data
 
 ## Console Main Commands
 - To make a model and migration(-m): php artisan make:model Category -m
 - To migrate: php artisan migrate
 - To make a controller: php artisan make:controller CategoryController --api
 - To run the project: php artisan serve
+
+## Project setup
+- To update dependencies: composer update
+- To run the migrations: php artisan migrate
+- To populate database: php artisan app:import-data
+- Run project: php artisan serve
 
 ## Activate ssh in my personal computer's git
 - eval "$(ssh-agent -s)"
