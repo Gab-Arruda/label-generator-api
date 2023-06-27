@@ -65,7 +65,12 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-To make a model and migration(-m): php artisan make:model Category -m
-To migrate: php artisan migrate
-To make a controller: php artisan make:controller CategoryController --api
-To run the project: php artisan serve
+## Console Main Commands
+- To make a model and migration(-m): php artisan make:model Category -m
+- To migrate: php artisan migrate
+- To make a controller: php artisan make:controller CategoryController --api
+- To run the project: php artisan serve
+
+## Activate ssh in my personal computer's git
+- eval "$(ssh-agent -s)"
+- ssh-add ~/.ssh/id_rsa
