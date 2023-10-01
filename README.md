@@ -66,7 +66,7 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 ## Populate database
-- The database is populated with some xlsx which are stored in storafe/app. To populate the database use the command: php artisan app:import-data
+- The database is populated with some xlsx which are stored in storage/app. To populate the database use the command: php artisan app:import-data
 
 ## Console Main Commands
 - To make a model and migration(-m): php artisan make:model Category -m

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\FoodController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,5 +22,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::group(['prefix' => 'category'], function () {
     Route::get('/', [CategoryController::class, 'index']);
-    Route::post('/', [CategoryController::class, 'import']);
+});
+
+Route::group(['prefix' => 'food'], function () {
+    Route::get('/', [FoodController::class, 'index']);
 });

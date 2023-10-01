@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use App\Imports\CategoryImport;
+use App\Imports\FoodImport;
 use Maatwebsite\Excel\Facades\Excel;
 
 class ImportData extends Command
@@ -28,5 +29,6 @@ class ImportData extends Command
     public function handle()
     {
         Excel::import(new CategoryImport, 'categories.xlsx');
+        Excel::import(new FoodImport, 'food.xlsx');
     }
 }
