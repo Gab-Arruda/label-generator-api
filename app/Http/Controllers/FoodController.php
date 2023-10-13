@@ -28,7 +28,7 @@ class FoodController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return Food::with('category')->find($id);
     }
 
     /**

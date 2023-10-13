@@ -10,4 +10,13 @@ class Category extends Model
     use HasFactory;
     protected $table = 'categories';
     protected $fillable = ['nome'];
+
+    public function foods()
+    {
+        return $this->hasMany(
+            Food::class,
+            'category_id',
+            'id'
+        );
+    }
 }

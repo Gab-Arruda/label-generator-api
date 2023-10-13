@@ -18,6 +18,14 @@ class CategoryController extends Controller
     }
 
     /**
+     * Display a listing of the resource with it.
+     */
+    public function listWithFoods()
+    {
+        return Category::with('foods')->get();
+    }
+
+    /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
@@ -30,7 +38,7 @@ class CategoryController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return Category::with('foods')->find($id);
     }
 
     /**
