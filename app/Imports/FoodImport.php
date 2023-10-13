@@ -17,6 +17,7 @@ class FoodImport implements ToModel, WithHeadingRow
     {
         return new Food([
             'nome' => $row['nome'],
+            'category_id' => $row['category_id'],
             'umidade' => $row['umidade'],
             'energia' => $row['energia'],
             'proteina' => $row['proteina'],
@@ -42,7 +43,9 @@ class FoodImport implements ToModel, WithHeadingRow
             'piridoxina' => $row['piridoxina'],
             'niacina' => $row['niacina'],
             'vitamina_c' => $row['vitamina_c'],
-            'category_id' => $row['category_id'],
+            'saturados' => $row['saturados'],
+            'mono_insaturados' => $row['mono_insaturados'],
+            'poli_insaturados' => $row['poli_insaturados'],
         ]);
     }
 }

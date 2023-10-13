@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('food', function (Blueprint $table) {
             $table->id();
             $table->string("nome");
+            $table->unsignedBigInteger("category_id");
             $table->string("umidade")->nullable();
             $table->string("energia")->nullable();
             $table->string("proteina")->nullable();
@@ -39,7 +40,9 @@ return new class extends Migration
             $table->string("piridoxina")->nullable();
             $table->string("niacina")->nullable();
             $table->string("vitamina_c")->nullable();
-            $table->unsignedBigInteger("category_id");
+            $table->string("saturados")->nullable();
+            $table->string("mono_insaturados")->nullable();
+            $table->string("poli_insaturados")->nullable();
             $table->timestamps();
 
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
