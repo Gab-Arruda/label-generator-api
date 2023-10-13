@@ -76,9 +76,11 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## Project setup
 - To update dependencies: composer update
+- Create a .env file and copy the .env.example content to the new file
+- Add the full path of the database/database.db file in your computer to DB_DATABASE inside the .env and change DB_CONNECTION to sqlite
 - To run the migrations: php artisan migrate
-- To populate database: php artisan app:import-data
-- Run project: php artisan serve
+- To populate database: php artisan app:import-data (this can take some minutes to finish)
+- To run the project: php artisan serve
 
 ## Activate ssh in my personal computer's git
 - eval "$(ssh-agent -s)"
