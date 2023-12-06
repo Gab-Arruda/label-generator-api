@@ -23,7 +23,7 @@ class FoodImport implements ToModel, WithHeadingRow
             'proteina' => $row['proteina'],
             'lipideos' => $row['lipideos'],
             'colesterol' => $row['colesterol'],
-            'carboidratos' => $row['carboidrato'],
+            'carboidrato' => $row['carboidrato'],
             'fibra_alimentar' => $row['fibra_alimentar'],
             'cinzas' => $row['cinzas'],
             'calcio' => $row['calcio'],
